@@ -1,0 +1,23 @@
+<image src='{{modelimg}}' class='modelBack' ></image>
+<form  bindsubmit="editorSubmit" class='editor_box' data-test="{{dates}}">
+<view class="container">
+  <view class='header'>
+      <image src='../images/goback.png' class="back" bindtap='back'></image>
+      <text class='header_text'>(❁´ω`❁)</text>
+  </view>
+  <view class="section">  
+      <picker mode="date" value="{{date}}" start="1999-01-01" end="2099-1-01" bindchange="bindDateChange">  
+        <view class="picker" data-text="{{dates}}" name="time" >  
+          日期: {{dates}}  
+        </view>  
+      </picker>  
+    </view>
+    <view class='title'>
+        <input class="title-inp"  placeholder='标题' name="title" value='{{title}}'/>
+    </view>
+    <view class='row' id="textareawrap" catchtap="onFocus">
+        <textarea placeholder='内容' fixed="true" class='text' name="textarea" value='{{text}}' maxlength="5000"></textarea>
+    </view>
+</view>
+<button formType="submit" class='model_btn'>保存</button>
+</form>
